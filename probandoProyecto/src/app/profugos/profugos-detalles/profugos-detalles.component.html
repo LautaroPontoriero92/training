@@ -1,0 +1,49 @@
+<div class="row">
+    <div class="col-xs-12">
+      <img
+        [src]="profugos.imagePath"
+        alt="{{ profugos.name }}"
+        class="img-responsive"
+        style="max-height: 300px;">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+      <h1>{{ profugos.name }}</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+      <div
+        class="btn-group"
+        appDropdown>
+        <button
+          type="button"
+          class="btn btn-danger dropdown-toggle">
+          Opciones de recompensas <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu">
+          <li><a (click)="onAddToReconpemsasLista()" style="cursor: pointer;">Sumar recompensa</a></li>
+          <li><a href="#">Editar recompensa</a></li>
+          <li><a href="#">Borrar recompensa</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+      {{ profugos.description }}
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+      <ul class="list-group">
+        <li
+          class="list-group-item"
+          *ngFor="let captura of profugos.capturas">
+          {{ captura.name }} - {{ captura.amount }}
+        </li>
+      </ul>
+    </div>
+  </div>
+  

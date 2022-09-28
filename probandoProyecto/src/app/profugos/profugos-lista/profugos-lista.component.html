@@ -1,0 +1,14 @@
+<div class="row">
+    <div class="col-xs-12">
+      <button class="btn btn-success">Agregar prófugo</button>
+    </div>
+  </div>
+  <hr>
+  <div class="row">
+    <div class="col-xs-12">
+      <app-profugos-items
+        *ngFor="let profugosEl of profugo"
+        [profugos]="profugosEl"></app-profugos-items>
+    </div>
+  </div>
+  

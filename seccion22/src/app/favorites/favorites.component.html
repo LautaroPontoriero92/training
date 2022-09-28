@@ -1,0 +1,18 @@
+<div *ngIf="isLoading" class="text-center">
+  <app-loading-spinner></app-loading-spinner>
+</div>
+
+<div class="list-group-item clearfix row" *ngFor="let favorite of favoritesRecipes">
+  <div class="pull-left">
+      <h4 class="list-group-item-heading">{{favorite.name}}</h4>
+      <p class="list-group-item-text">{{favorite.description}}</p>
+  </div>
+
+  <span class="pull-right">
+      <img [src]="favorite.imagePath" alt="{{favorite.name}}" class="img-responsive" style="max-height: 50px;">
+  </span>
+</div>
+
+<div *ngIf="!isLoading && favoritesRecipes.length == 0">
+  <p class="text-muted text-center" id="warning">There are no exist favorites</p>
+</div>

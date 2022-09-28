@@ -1,0 +1,14 @@
+<div class="row">
+    <div class="col-md-5">
+      <app-profugos-lista></app-profugos-lista>
+    </div>
+    <div class="col-md-7">
+      <app-profugos-detalles
+        *ngIf="selectedProfugos; else infoText"
+        [profugos]="selectedProfugos"></app-profugos-detalles>
+      <ng-template #infoText>
+        <h3>Personas peligrosas buscadas por todo el multiverso!
+          <small class="text-muted">Recuerde! Los sujetos son peligrosos!</small></h3>
+      </ng-template>
+    </div>
+  </div>

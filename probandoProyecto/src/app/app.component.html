@@ -1,0 +1,9 @@
+<app-header (featureSelected)="onNavigate($event)"></app-header>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <app-profugos *ngIf="loadedFeature === 'profugos'"></app-profugos>
+      <app-recompensas-lista *ngIf="loadedFeature !== 'profugos'"></app-recompensas-lista>
+    </div>
+  </div>
+</div>
